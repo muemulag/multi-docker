@@ -21,3 +21,16 @@ after_success:
   - docker push masashiu/multi-nginx
   - docker push masashiu/multi-server
   - docker push masashiu/multi-worker
+
+deploy:
+  # edge: true  # if missing bucket_name error
+  provider: elasticbeanstalk
+  region: "ap-northeast-1"
+  app: "uemura-udemy-k8s"
+  env: "UemuraUdemyK8sMultiDocker-env"
+  bucket_name: elasticbeanstalk-ap-northeast-1-085107194442
+  bucket_path: "uemura-multi-docker"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_KEY: $AWS_SECRET_KEY
