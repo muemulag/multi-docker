@@ -7,7 +7,7 @@ before_install:
   - docker build -t masashiu/multi-client:latest -f ./client/Dockerfile.dev ./client
 
 script:
-  - docker run -e CI=true masashiu/react-test npm test
+  - docker run -e CI=true masashiu/multi-client:latest npm test
 
 after_success:
   - docker build -t masashiu/multi-client:latest ./client
