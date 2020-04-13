@@ -2,7 +2,7 @@ FROM node:alpine as builder
 
 WORKDIR '/app'
 
-COPY ./package.json ./packeage-lock.json ./
+COPY ./package.json ./
 RUN yarn install
 
 COPY . .
