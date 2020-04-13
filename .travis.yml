@@ -4,7 +4,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t masashiu/multi-client:latest -f Dockerfile.dev ./client
+  - docker build -t masashiu/multi-client:latest -f ./client/Dockerfile.dev ./client
 
 script:
   - docker run -e CI=true masashiu/react-test npm test
