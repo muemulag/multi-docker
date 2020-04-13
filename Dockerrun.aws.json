@@ -3,7 +3,7 @@
   "containerDefinitions": [
     {
       "name": "client",
-      "image": "masashiu/multi-client",
+      "image": "masashiu/multi-client:latest",
       "hostname": "client",
       "essential": false,
       "memory": 128
@@ -11,7 +11,7 @@
 
     {
       "name": "server",
-      "image": "masashiu/multi-server",
+      "image": "masashiu/multi-server:latest",
       "hostname": "api",
       "essential": false,
       "memory": 128
@@ -19,7 +19,7 @@
 
     {
       "name": "worker",
-      "image": "masashiu/multi-worker",
+      "image": "masashiu/multi-worker:latest",
       "hostname": "worker",
       "essential": false,
       "memory": 128
@@ -27,7 +27,7 @@
 
     {
       "name": "nginx",
-      "image": "masashiu/multi-nginx",
+      "image": "masashiu/multi-nginx:latest",
       "hostname": "nginx",
       "essential": true,
       "portMappings": [
